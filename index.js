@@ -11,12 +11,12 @@ module.exports = {
   treeForAddon: function() {
     var addonTree = this._super.treeForAddon.apply(this, arguments);
 
-    var swal = new Funnel('./node_modules/sweetalert2/src', {
+    var swal = new Funnel('/node_modules/sweetalert2/src', {
       destDir: 'modules',
       files: ['sweetalert2.js']
     });
 
-    var swalStyles = new Funnel('./node_modules/sweetalert2/dist', {
+    var swalStyles = new Funnel('/node_modules/sweetalert2/dist', {
       destDir: 'assets',
       files: ['sweetalert2.css']
     });
